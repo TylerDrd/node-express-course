@@ -6,3 +6,7 @@ function addValues() {
 }
 
 addValues()
+
+// if there is a function call inside a module and it is invoked, that is, imported in 
+// another module even though not assigned any variable, it will still be executed
+// when importing a module, it will be invoked
