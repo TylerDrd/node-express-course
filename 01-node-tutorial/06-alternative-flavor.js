@@ -4,3 +4,4 @@ const person = {
 }
 
 module.exports.singlePerson = person //singlePerson is an object containing person.
+console.log(module)
