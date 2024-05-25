@@ -1,3 +1,4 @@
+const { fstat } = require('fs')
 const os = require('os')
 
 // info about current user
@@ -14,3 +15,11 @@ const currentOS = {
   freeMem: os.freemem(),
 }
 console.log(currentOS)
+
+ /*
+  The built in OS modules -
+  os 
+  path 
+  fs
+  http
+  */

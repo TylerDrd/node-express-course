@@ -1,5 +1,8 @@
 const { readFile, writeFile } = require('fs')
 
+// A callback function is a function that is passed as an argument to another function.
+//  This technique allows the parent function to call the callback function after it has 
+//  completed its execution
 console.log('start')
 readFile('./content/first.txt', 'utf8', (err, result) => {
   if (err) {
