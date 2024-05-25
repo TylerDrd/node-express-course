@@ -30,3 +30,6 @@ readFile('./content/first.txt', 'utf8', (err, result) => {
   })
 })
 console.log('starting next task')
+
+//here, after console.log(start), it is async, so went directly to 'starting next task' and 
+//then executed it. good when there are multiple users and tasks may take time to complete.

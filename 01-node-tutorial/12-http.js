@@ -1,5 +1,9 @@
 const http = require('http')
 
+//http module allows us to create a web server
+//package, module, dependency are same, documents containing code
+//npmjs.com site for all npm packages
+
 const server = http.createServer((req, res) => {
   //   if (req.url === '/') {
   //     res.end('Welcome to our home page')
