@@ -16,3 +16,6 @@
 //as it stores all dependency details, we store all the dependency names in gitignore
 //that way, we do not have to pass the node modules when making a repo which could take 
 //lot of space, we just clone the repo and run npm i to get all dependency in the project.json
+//given that project.json is present in the clone
+
+//gitignore is a file that contains all the files that are ignored by the search control

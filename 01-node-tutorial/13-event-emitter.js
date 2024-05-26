@@ -19,3 +19,12 @@ customEmitter.on('response', () => {
 })
 
 customEmitter.emit('response', 'john', 34)
+
+// The event loop is what allows Node.js to perform
+//  non-blocking I/O operations — despite the fact that 
+//  JavaScript is single-threaded — by offloading operations 
+//  to the system kernel whenever possible.
+
+//when there are multiple users, an event loop registers
+//each request as a callback, and only after it is completed, it is executed
+//when there is no immediate code to run, callback is executed
