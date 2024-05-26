@@ -10,3 +10,9 @@
 //manual approach (create package.json in the root, create properties etc)  - 1
 //npm init (step by step, press enter to skip)   - 2
 //npm init -y (everything default)   - 3
+
+//package.json is imp for downloading dependencies - npm <package name>
+//after installing a package, all packages are stored in npm_modules folder
+//as it stores all dependency details, we store all the dependency names in gitignore
+//that way, we do not have to pass the node modules when making a repo which could take 
+//lot of space, we just clone the repo and run npm i to get all dependency in the project.json
