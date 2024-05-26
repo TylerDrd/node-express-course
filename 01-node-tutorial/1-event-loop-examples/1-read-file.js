@@ -11,3 +11,6 @@ readFile('./content/first.txt', 'utf8', (err, result) => {
   console.log('completed first task')
 })
 console.log('starting next task')
+
+//readfile() is async, so all other code executed and readfile() is offloaded and callback
+//executed when task completed
