@@ -6,7 +6,7 @@
 // module     - info about current module (file)
 // process    - info about env where the program is being executed
 
-//All of these are globals and do not require any window
+//All of these are global variables and do not require any window
 
 console.log(__dirname)
 setInterval(() => {

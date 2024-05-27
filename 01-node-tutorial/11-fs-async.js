@@ -33,3 +33,5 @@ console.log('starting next task')
 
 //here, after console.log(start), it is async, so went directly to 'starting next task' and 
 //then executed it. good when there are multiple users and tasks may take time to complete.
+
+//Better soln is to use Promise. async await to make the promise non blocking

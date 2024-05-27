@@ -19,3 +19,8 @@ const server = http.createServer((req, res) => {
 server.listen(5000, () => {
   console.log('Server listening on port : 5000....')
 })
+
+//for loops are blocking code, need to be executed together (sync)
+//this does not mean that only the user accessing about page is blocked, every user is
+//blocked until the for loop is executed.
+//So, try to setup your code asynchronously to not block other user
