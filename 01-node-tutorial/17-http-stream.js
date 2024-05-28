@@ -7,7 +7,8 @@ http
     // res.end(text)
     const fileStream = fs.createReadStream('./content/big.txt', 'utf8')
     fileStream.on('open', () => {
-      fileStream.pipe(res)
+      fileStream.pipe(res)   //push data from readstream to writestream, if we can read data in chunks
+                             //we can also write data in chunks
     })
     fileStream.on('error', (err) => {
       res.end(err)

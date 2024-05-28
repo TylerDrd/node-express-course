@@ -3,7 +3,7 @@
 // otherwise just for emitting and handling events create instance
 const EventEmitter = require('events')
 
-const customEmitter = new EventEmitter() //this is the instance of our class, the object
+const customEmitter = new EventEmitter() //this is the instance of our class, the object, to emit and listen event
 
 // on and emit methods - on(listen for event) and emit (emit event)
 // keep track of the order

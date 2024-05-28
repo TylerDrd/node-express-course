@@ -11,3 +11,9 @@ stream.on('data', (result) => {
   console.log(result)
 })
 stream.on('error', (err) => console.log(err))
+
+//streams are used to read or write sequentially (when we have to handle or manipulate stream data)
+//4 types of streams - writeable, readable, duplex and transform
+
+//when file is too large to be read or write in a single variable, we use stream
+//it reads/writes data in chunks, instead of the whole data as in read and write
