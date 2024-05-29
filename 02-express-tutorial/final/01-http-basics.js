@@ -6,8 +6,8 @@ const server = http.createServer((req, res) => {
   // home page
   if (url === '/') {
     res.writeHead(200, { 'content-type': 'text/html' }) //issue 1, and what type of content is sent, html, js, image etc
-    res.write('<h1>home page</h1>')
-    res.end()
+    res.write('<h1>home page</h1>')   //can also read (sync or async) a file and give the file name instead of writing the content of file
+    res.end() //this sends the content of file, not the file itself
   }
   // about page
   else if (url === '/about') {

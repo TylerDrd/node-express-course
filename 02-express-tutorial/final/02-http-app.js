@@ -1,6 +1,6 @@
 const http = require('http')
 const { readFileSync } = require('fs')
-
+//see this example app again, doubtful
 // get all files
 const homePage = readFileSync('./navbar-app/index.html')
 const homeStyles = readFileSync('./navbar-app/styles.css')
