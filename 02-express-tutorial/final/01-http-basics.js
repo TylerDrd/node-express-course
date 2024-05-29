@@ -1,11 +1,11 @@
 const http = require('http')
 
 const server = http.createServer((req, res) => {
-  // console.log(req.method)
+  //  console.log(req.url)
   const url = req.url
   // home page
   if (url === '/') {
-    res.writeHead(200, { 'content-type': 'text/html' })
+    res.writeHead(200, { 'content-type': 'text/html' }) //issue 1, and what type of content is sent, html, js, image etc
     res.write('<h1>home page</h1>')
     res.end()
   }
@@ -24,3 +24,7 @@ const server = http.createServer((req, res) => {
 })
 
 server.listen(5000)
+
+//The problem with res, req in create server is that - 
+// 1. not providing metadata (info about the data we are sending back) - so add header
+// 2. giving same response for different requests
