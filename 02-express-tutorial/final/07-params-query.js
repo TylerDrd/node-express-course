@@ -5,6 +5,8 @@ const { products } = require('./data')
 app.get('/', (req, res) => {
   res.send('<h1> Home Page</h1><a href="/api/products">products</a>')
 })
+
+//this is for viewing some features of all elements
 app.get('/api/products', (req, res) => {
   const newProducts = products.map((product) => {
     const { id, name, image } = product
@@ -13,6 +15,8 @@ app.get('/api/products', (req, res) => {
 
   res.json(newProducts)
 })
+
+//whatever we setup as Route Parameter(:productID) in URL comes back as string
 app.get('/api/products/:productID', (req, res) => {
   // console.log(req)
   // console.log(req.params)

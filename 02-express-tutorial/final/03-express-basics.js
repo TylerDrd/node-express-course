@@ -1,7 +1,11 @@
-const express = require('express')
-const app = express()
+//express is built on top of node and adds more features.
+//it is flexible node js web app framework, makes web apps and api much faster and easier.
+//not a built in module
 
-app.get('/', (req, res) => {
+const express = require('express')  //import module
+const app = express()   //invoke the module
+
+app.get('/', (req, res) => {   //callback invoked everytime user wants to 'get' the root dir
   console.log('user hit the resource')
   res.status(200).send('Home Page')
 })
