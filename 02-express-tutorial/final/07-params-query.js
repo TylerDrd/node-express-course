@@ -28,7 +28,7 @@ app.get('/api/products/:productID', (req, res) => {
   if (!singleProduct) {
     return res.status(404).send('Product Does Not Exist')
   }
-
+//we cannot send 2 responses in 1 request, so good practice to use return keyword
   return res.json(singleProduct)
 })
 
@@ -37,6 +37,9 @@ app.get('/api/products/:productID/reviews/:reviewID', (req, res) => {
   res.send('hello world')
 })
 
+//1. Route Parameters
+//2. Query String Parameters - send small amount of info to server using the url and server decides
+// what to do with this data
 app.get('/api/v1/query', (req, res) => {
   // console.log(req.query)
   const { search, limit } = req.query
