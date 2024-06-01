@@ -40,6 +40,8 @@ app.get('/api/products/:productID/reviews/:reviewID', (req, res) => {
 //1. Route Parameters
 //2. Query String Parameters - send small amount of info to server using the url and server decides
 // what to do with this data
+
+//api/v1/query?search=a&limit=2 - example of url
 app.get('/api/v1/query', (req, res) => {
   // console.log(req.query)
   const { search, limit } = req.query
