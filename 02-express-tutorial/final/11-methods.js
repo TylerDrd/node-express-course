@@ -2,17 +2,27 @@ const express = require('express')
 const app = express()
 let { people } = require('./data')
 
-// static assets
+// static assets- middleware for static assets
 app.use(express.static('./methods-public'))
-// parse form data
+
+// parse form data - parse the data and add it to req.body - middleware for post requests
+//buit-in middleware, parses incoming requests with urlencoded payloads and based on body parser
 app.use(express.urlencoded({ extended: false }))
+
 // parse json
+//to handle the incoming json data, without this, it was just handling events like form submission
 app.use(express.json())
 
 app.get('/api/people', (req, res) => {
   res.status(200).json({ success: true, data: people })
 })
 
+
+//we cannot simply configure browser to do a post request
+//tools like postman or insomnia
+
+//app.post handles if any post() command comes (handling request)
+//to get access to data, to add the data, we need middleware
 app.post('/api/people', (req, res) => {
   const { name } = req.body
   if (!name) {
@@ -34,6 +44,7 @@ app.post('/api/postman/people', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
+  //console.log(req.body)
   const { name } = req.body
   if (name) {
     return res.status(200).send(`Welcome ${name}`)

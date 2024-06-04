@@ -68,6 +68,7 @@
         const nameValue = input.value
 
         try {
+          //data we are sending, pass as second argument 
           const { data } = await axios.post('/api/people', { name: nameValue })
           const h5 = document.createElement('h5')
           h5.textContent = data.person
