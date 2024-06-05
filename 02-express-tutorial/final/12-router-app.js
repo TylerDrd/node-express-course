@@ -13,6 +13,8 @@ app.use(express.json())
 
 app.use('/api/people', people)
 app.use('/login', auth)
+//we have one route for login and rest for api/people grouped together
+//we do this by setting up the router
 
 app.listen(5000, () => {
   console.log('Server is listening on port 5000....')

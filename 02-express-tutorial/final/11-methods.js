@@ -54,8 +54,8 @@ app.post('/login', (req, res) => {
 })
 
 app.put('/api/people/:id', (req, res) => {
-  const { id } = req.params
-  const { name } = req.body
+  const { id } = req.params//we send id through url
+  const { name } = req.body//send name through body for put req
 
   const person = people.find((person) => person.id === Number(id))
 

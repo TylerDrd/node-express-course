@@ -37,6 +37,7 @@ app.post('/api/people', (req, res) => {
   res.status(201).json({ success: true, person: name })
 })
 
+//append to the data instead of just that name as in api people
 app.post('/api/postman/people', (req, res) => {
   const { name } = req.body
   if (!name) {

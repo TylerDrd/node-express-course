@@ -20,7 +20,7 @@ app.get('/api/products', (req, res) => {
 app.get('/api/products/:productID', (req, res) => {
   // console.log(req)
   // console.log(req.params)
-  const { productID } = req.params
+  const { productID } = req.params //req.params stores the product id param
 
   const singleProduct = products.find(
     (product) => product.id === Number(productID)
@@ -41,7 +41,7 @@ app.get('/api/products/:productID/reviews/:reviewID', (req, res) => {
 //2. Query String Parameters - send small amount of info to server using the url and server decides
 // what to do with this data
 
-//api/v1/query?search=a&limit=2 - example of url
+//api/v1/?search=a&limit=2 - example of url
 app.get('/api/v1/query', (req, res) => {
   // console.log(req.query)
   const { search, limit } = req.query
