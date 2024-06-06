@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 
-const people = require('./routes/people')
-const auth = require('./routes/auth')
+const people = require('./routes/people') //importing the router
+const auth = require('./routes/auth')//importing the router
 
 // static assets
 app.use(express.static('./methods-public'))
@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }))
 // parse json
 app.use(express.json())
 
-app.use('/api/people', people)
+app.use('/api/people', people)//for this route, i want to use my people router
 app.use('/login', auth)
 //we have one route for login and rest for api/people grouped together
 //we do this by setting up the router

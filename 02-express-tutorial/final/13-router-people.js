@@ -9,6 +9,9 @@ const {
   deletePerson,
 } = require('../controllers/people')
 
+//instead of defining routes and functions in one file, we define routes and import functions
+//much cleaner code
+
 // router.get('/', getPeople)
 // router.post('/', createPerson)
 // router.post('/postman', createPersonPostman)
